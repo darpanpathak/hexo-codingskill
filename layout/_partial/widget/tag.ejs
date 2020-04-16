@@ -1,0 +1,10 @@
+<% if (site.tags.length){ %>
+
+<div class="card border-0 shadow mb-4 rounded">
+  <div class="card-body">
+    <h5 class="mb-3 font-weight-bold"> Tags </h5>
+    <%- list_tags({show_count: theme.show_count, class: 'sidebar'}) %>
+  </div>
+</div>
+
+<% } %>

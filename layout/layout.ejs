@@ -1,0 +1,42 @@
+<%- partial('_partial/head') %>
+
+<body>
+
+  <!-- Navigation -->
+  <%- partial('_partial/menu') %>
+  <!-- Navigation end -->
+
+  <!-- Header -->
+  <%- partial('_partial/header') %>
+  <!-- Header End -->
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <!-- Blog Entries Column -->
+      <div class="col-md-8 mt-4">
+        <%- body %>
+      </div>
+
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-4 mt-4">
+
+        <%- partial('_partial/sidebar') %>
+
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <%- partial('_partial/footer') %>
+  <!-- Footer end -->
+
+</body>
+
+</html>

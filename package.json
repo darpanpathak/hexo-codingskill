@@ -1,0 +1,10 @@
+{
+  "name": "hexo-codingskill",
+  "version": "1.0.0",
+  "description": "A simple yet powerful bootstrap 4 hexo theme",
+  "author": "Darpan Pathak",
+  "private": true,
+  "peerDependencies": {
+    "hexo-generator-search": "^2.4.0"
+  }
+}

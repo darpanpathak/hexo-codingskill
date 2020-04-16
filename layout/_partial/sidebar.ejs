@@ -1,0 +1,13 @@
+<% if(config.widgets) { %>
+
+    <% for(var widget in config.widgets){ %>
+        <%- partial('./widget/' + widget) %>
+    <% }; %>
+
+<% } else { %>
+
+    <% for(var widget in theme.widgets){ %>
+        <%- partial('./widget/' + widget) %>
+    <% }; %>
+
+<% } %>

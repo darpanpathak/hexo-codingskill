@@ -1,0 +1,28 @@
+<div class="card mb-4 shadow-lg rounded">
+    
+    <% if(item.thumbnail) { %>
+
+        <img class="card-img-top rounded" src="<%- item.thumbnail %>" alt="<%- item.title %>">
+
+    <% } %>
+    
+    <div class="card-body">
+        <h2 class="card-title"> <%- item.title || item.link%> </h2>
+        <p class="card-text">
+            <%- item.excerpt || item.content %>
+        </p>
+
+        <% if(item.excerpt) { %>
+            <p>
+                <a class="btn btn-primary" href="<%- config.root %><%- item.path %>">
+                    <%= theme.excerpt_link %>
+                </a>
+            </p>
+        <% } %>
+
+    </div>
+    <div class="card-footer text-muted">
+        Posted on <%= item.date.format(config.date_format) %> by
+        <a href="<%- config.root %><%- item.path %>"><%- item.author || config.author %></a>
+    </div>
+</div>

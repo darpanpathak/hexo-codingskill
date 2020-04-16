@@ -1,0 +1,22 @@
+<% if (site.posts.length){ %>
+<div class="card border-0 shadow mb-4 rounded">
+  <div class="card-body">
+    <h5 class="mb-3 font-weight-bold"> Recent Posts </h5>
+
+    <% let recentPosts = site.posts.sort('date', -1).limit(5) %>
+    <% recentPosts.each(function(post, index){ %>
+
+      <div class="d-flex justify-content-between">
+        <a class="font-weight-bold" href="<%- url_for(post.path) %>"><%= post.title || '(no title)' %></a>
+      </div>
+
+      <% if (index !== (recentPosts.length -1)) { %>
+        <hr class="my-2">
+      <% } %>
+
+    <% }) %>
+    
+  </div>
+</div>
+
+<% } %>

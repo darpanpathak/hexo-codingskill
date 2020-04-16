@@ -1,0 +1,38 @@
+<div class="card mb-4 shadow-lg rounded">
+
+    <div class="card-body article-entry">
+
+        <% if(item.thumbnail) { %>
+        <img class="card-img-top rounded" src="<%- item.thumbnail %>" alt="<%- item.title %>">
+        <% } %>
+
+        <!-- Title -->
+        <h2 class="card-title">
+            <a href="<%- config.root %><%- item.path %>">
+                <%- item.title || item.link%>
+            </a>
+        </h2>
+
+        <!-- Date and Author -->
+        <h6 class="card-title">
+            <%= item.date.format(config.date_format) %>
+            <% if(item.author) { %>
+            by <%- item.author %>
+            <% } %>
+        </h6>
+
+        <!-- Content -->
+        <%- item.content %>
+        <span id="existing-claps" style="display: none;"> <%- item.claps %> </span>
+
+    </div>
+
+</div>
+
+<div class="card mb-4 shadow-lg rounded">
+
+    <div class="card-body">
+        <!-- Comments -->
+        <%- partial('comments') %>
+    </div>
+</div>
