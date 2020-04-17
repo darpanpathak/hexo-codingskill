@@ -15,6 +15,8 @@
 
     <div class="row">
 
+      <% if (!page.full) { %>
+
       <!-- Blog Entries Column -->
       <div class="col-md-8 mt-4">
         <%- body %>
@@ -26,6 +28,13 @@
         <%- partial('_partial/sidebar') %>
 
       </div>
+
+    <% } else { %>
+      <div class="col-md-12 mt-4">
+        <%- body %>
+      </div>
+
+    <% } %>
 
     </div>
     <!-- /.row -->

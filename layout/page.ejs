@@ -1,1 +1,9 @@
+<% if (page.title == 'about') { %>
+
+<%- partial('_partial/about', {item: page, index: false}) %>
+
+<% } else { %>
+
 <%- partial('_partial/article-full', {item: page, index: false}) %>
+
+<% } %>

@@ -13,6 +13,17 @@ $(document).ready(() => {
         }
     }
 
+    const imgListAboutPage = $('.cs-above-content img');
+    if(imgListAboutPage && imgListAboutPage.length > 0) {
+        
+        for (let i = 0; i < imgListAboutPage.length; i++) {
+            const classList = imgListAboutPage[i].classList || { value: "" };
+
+            classList.add('card-img-about');
+        }
+
+    }
+
     // this line make sure that gist will open in new tab
     $('.gist-meta').find('a').attr('target', '_blank');
 
