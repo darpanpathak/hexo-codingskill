@@ -1,29 +1,5 @@
 $(document).ready(() => {
 
-    // this code snippet will make sure that images in blog post becomes responsive
-    const imgList = $('.card-body img');
-    if (imgList && imgList.length > 0) {
-
-        for (let i = 0; i < imgList.length; i++) {
-            const classList = imgList[i].classList || { value: "" };
-
-            if (classList.value.indexOf('card-img') === -1) {
-                classList.add('card-img');
-            }
-        }
-    }
-
-    const imgListAboutPage = $('.cs-above-content img');
-    if(imgListAboutPage && imgListAboutPage.length > 0) {
-        
-        for (let i = 0; i < imgListAboutPage.length; i++) {
-            const classList = imgListAboutPage[i].classList || { value: "" };
-
-            classList.add('card-img-about');
-        }
-
-    }
-
     // this line make sure that gist will open in new tab
     $('.gist-meta').find('a').attr('target', '_blank');
 

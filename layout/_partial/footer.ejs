@@ -1,6 +1,15 @@
-<footer class="py-5 bg-dark">
+<footer class="py-2 bg-dark">
     <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+
+        <div class="cs-social-icon-list social-footer">
+            <span><a href="<%- theme.social.facebook %>"><i class="fab fa-facebook"></i></a></span>
+            <span><a href="<%- theme.social.twitter %>"><i class="fab fa-twitter"></i></a></span>
+            <span><a href="<%- theme.social.github %>"><i class="fab fa-github"></i></a></span>
+            <span><a href="<%- theme.social.instagram %>"><i class="fab fa-instagram"></i></a></span>
+            <span><a href="<%- theme.social.stackoverflow %>"><i class="fab fa-stack-overflow"></i></a></span>
+        </div>
+
+        <p class="m-0 text-center text-white">Copyright &copy; <%- config.title %> <%- config.year %> </p>
     </div>
 </footer>
 
@@ -89,3 +98,24 @@
         $('.fancybox').fancybox();
     }
 </script>
+
+<% if (is_post()) { %>
+
+<script>
+
+    // this code snippet will make sure that images in blog post becomes responsive
+    const imgList = $('.card-body img');
+    if (imgList && imgList.length > 0) {
+
+        for (let i = 0; i < imgList.length; i++) {
+            const classList = imgList[i].classList || { value: "" };
+
+            if (classList.value.indexOf('card-img') === -1) {
+                classList.add('card-img');
+            }
+        }
+    }
+
+</script>
+
+<% } %>
