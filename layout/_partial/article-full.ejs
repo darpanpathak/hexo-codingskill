@@ -24,6 +24,37 @@
         <!-- Content -->
         <%- item.content %>
 
+        <div class="cs-content-tags">
+            <%- list_tags(item.tags, {
+                show_count: false,
+                class: 'cs-post-tags'
+              }) %>
+        </div>
+
+        <div class="mt-5">
+            <h2>Love the post? Share it!</h2>
+            <p>
+                Lots of time and effort go into creating all these blogs, resources and demos, I'd love if you'd spare a moment to share this one!
+            </p>
+
+            <div class="mt-2 d-flex">
+                <a class="btn social-link social-twitter mr-3" href="https://twitter.com/intent/tweet?url=<%- item.permalink %>" target="_blank">
+                    <i class="fab fa-twitter mr-1"></i>
+                    Twitter
+                </a>
+
+                <a class="btn social-link social-facebook mr-3" href="https://www.facebook.com/sharer.php?u=<%- item.permalink %>" target="_blank">
+                    <i class="fab fa-facebook mr-1"></i>
+                    Facebook
+                </a>
+
+                <a class="btn social-link social-linkedin mr-3" href="https://www.linkedin.com/shareArticle?mini=true&url=<%- item.permalink %>" target="_blank">
+                    <i class="fab fa-linkedin-in mr-1"></i>
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+
     </div>
 
 </div>

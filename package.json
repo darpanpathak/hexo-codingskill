@@ -5,6 +5,8 @@
   "author": "Darpan Pathak",
   "private": true,
   "peerDependencies": {
-    "hexo-generator-search": "^2.4.0"
+    "hexo-generator-search": "^2.4.0",
+    "hexo-prism-plugin": "^2.3.0",
+    "hexo-html-minifier": "^1.0.0"
   }
 }

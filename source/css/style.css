@@ -51,17 +51,28 @@ body {
     border-radius: .5rem !important;
 }
 
-.gutter {
-    display: none;
+.cs-post-tags-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 2rem;
+    display: flex;
 }
 
-.code {
+.cs-post-tags-list-item {
+    background-color: black;
+    margin-right: 0.5rem;
+    line-height: 2rem;
+    border-radius: 1rem;
+}
+
+.cs-post-tags-list-link {
     padding: 1rem;
-    background: #efefef;
+    color: #efefef;
 }
 
-figure {
-    overflow: scroll;
+.cs-post-tags-list-link:hover {
+    text-decoration: none;
+    color: white;
 }
 
 .cs-auto-complete {
@@ -195,6 +206,12 @@ figure {
 
 /* FOOTER */
 
+.social-link {
+    color: white !important;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+}
+
 .social-footer i {
     font-size: 1.5rem;
     color: white;
@@ -202,4 +219,36 @@ figure {
 
 .social-footer span {
     padding: 10px;
+}
+
+/* Footer end */
+
+.social-twitter {
+    background-color: #1daee3;
+    border-color: #3997ba;
+}
+
+.social-twitter:hover {
+    background-color: #3997ba;
+    border-color: #347b95;
+}
+
+.social-facebook {
+    background-color: #4c699e;
+    border-color: #47618d;
+}
+
+.social-facebook:hover {
+    background-color: #47618d;
+    border-color: #3c5173;
+}
+
+.social-linkedin {
+    background-color: #4875B4;
+    border-color: #466b99;
+}
+
+.social-linkedin:hover {
+    background-color: #466b99;
+    border-color: #3b5a7c;
 }
