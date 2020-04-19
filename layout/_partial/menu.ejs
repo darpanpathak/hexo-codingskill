@@ -16,9 +16,9 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ">
 
-        <% for (var i in config.menu){ %>
-        <li class="nav-item <%= is_current(config.menu[i]) ? 'active' : '' %>">
-          <a class="nav-link" href="<%- url_for(config.menu[i]) %>"> <%= i %> </a>
+        <% for (var i in theme.menu){ %>
+        <li class="nav-item <%= is_current(theme.menu[i]) ? 'active' : '' %>">
+          <a class="nav-link" href="<%- url_for(theme.menu[i]) %>"> <%= i %> </a>
         </li>
 
         <% } %>
