@@ -28,6 +28,7 @@ function doSearch(path, searchTerm) {
 }
 
 function searchComplete(data, searchTerm) {
+    console.log(data, searchTerm);
     if (data && data.length > 0) {
 
         const keywords = searchTerm.toLowerCase().split(/[\s\-]+/);
@@ -36,29 +37,31 @@ function searchComplete(data, searchTerm) {
 
         let numberOfPostFound = 0;
 
-        data.forEach((item) => {
+        for (let item of data) {
 
-            const item_title = item.title.toLowerCase();
-            const item_content = item.content.toLowerCase();
+            if (numberOfPostFound <= 10) {
 
+                const item_title = item.title.toLowerCase();
+                const item_content = item.content.toLowerCase();
 
-            let isFound = false;
-            for (let kw of keywords) {
-                if (item_title.indexOf(kw) > -1) {
-                    isFound = true;
-                    break;
-                } else if (item_content.indexOf(kw) > -1) {
-                    isFound = true;
-                    break;
+                let isFound = false;
+                for (let kw of keywords) {
+                    if (item_title.indexOf(kw) > -1) {
+                        isFound = true;
+                        break;
+                    } else if (item_content.indexOf(kw) > -1) {
+                        isFound = true;
+                        break;
+                    }
                 }
-            }
 
-            if (isFound) {
-                numberOfPostFound++;
-                $suggestionBox.append(`<li data-url="${item.url}">${item.title}</li>`);
-            }
+                if (isFound) {
+                    numberOfPostFound++;
+                    $suggestionBox.append(`<li data-url="${item.url}">${item.title}</li>`);
+                }
 
-        });
+            }
+        }
 
         if (!numberOfPostFound) {
             $suggestionBox.append(`<li> No post found </li>`);

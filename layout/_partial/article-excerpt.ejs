@@ -7,7 +7,7 @@
     <% } %>
     
     <div class="card-body">
-        <h2 class="card-title"> <%- item.title || item.link%> </h2>
+        <h2 class="card-title"> <%- partial('post/title', {item: item}) %> </h2>
         <p class="card-text">
             <%- item.excerpt || item.content %>
         </p>

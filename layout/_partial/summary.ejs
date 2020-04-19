@@ -3,11 +3,7 @@
     <div class="card-body">
 
         <h2 class="card-title">
-            <% if(item.link || item.path) { %>
-               <a href="<%- url_for(item.link || item.path) %>" target="_blank"> <%- item.title%> </a>
-            <% } else { %>
-                <%- item.title%>
-            <% } %>
+            <%- partial('post/title', {item: item}) %>
         </h2>
 
 
