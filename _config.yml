@@ -1,0 +1,56 @@
+# Header
+menu:
+  Home: index.html
+  Archives: archives/
+  About: about/
+rss: /atom.xml
+
+# Content
+excerpt_link: Read More
+fancybox: true
+
+# Sidebar
+sidebar: right
+widgets:
+  category: true
+  tag: true
+  tagcloud: true
+  recent_posts: true
+
+# display widgets at the bottom of index pages (pagination == 2)
+index_widgets:
+# - category
+# - tagcloud
+# - archive
+
+# widget behavior
+archive_type: 'monthly'
+show_count: false
+
+# Miscellaneous
+google_analytics: UA-XXXXX-1
+gauges_analytics:
+favicon: /img/favicon.png
+twitter: twxxxxer
+google_plus:
+fb_admins:
+fb_app_id:
+
+# Disqus Comments Shortname
+disqus_shortname: XXXX-XXXX
+
+social:
+  facebook: https://www.facebook.com/xxxxx
+  twitter: https://twitter.com/xxxxx
+  instagram: http://instagram.com/xxxxx
+  github: https://github.com/xxxxx
+  stackoverflow:
+
+author:
+  facebook: https://www.facebook.com/xxxxx
+  twitter: https://twitter.com/xxxxx
+  instagram: http://instagram.com/xxxxx
+  github: https://github.com/xxxxx
+  avatar: https://www.w3schools.com/w3images/avatar2.png
+
+
