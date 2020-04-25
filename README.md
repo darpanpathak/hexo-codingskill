@@ -6,7 +6,7 @@ $ git clone https://github.com/darpanpathak/hexo-codingskill.git themes/codingsk
 ```
 Once theme is setup, please install peer dependencie as well by running following commands.
 ```
-npm i --save hexo-generator-search hexo-prism-plugin hexo-html-minifier
+npm i --save hexo-generator-search 
 ```
 
 ### Enable
@@ -73,19 +73,12 @@ search:
 ```
 theme: codingskill
 
-prism_plugin:
-	mode: 'preprocess'  # realtime/preprocess
-	theme: 'atom-dark'
-	line_number: true
+highlight:
+  enable: true
+  line_number: false
+  auto_detect: true
+  tab_replace: ''
+  wrap: true
+  hljs: true
 
-html_minifier:
-	collapseBooleanAttributes: true
-	collapseWhitespace: true
-	ignoreCustomComments: [ !!js/regexp  /^\s*more/]
-	removeComments: true
-	removeEmptyAttributes: true
-	removeScriptTypeAttributes: true
-	removeStyleLinkTypeAttributes: true
-	minifyJS: true
-	minifyCSS: true
 ```

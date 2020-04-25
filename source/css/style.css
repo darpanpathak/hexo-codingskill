@@ -4,6 +4,10 @@ body {
     font-family: nunito, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol, noto color emoji;
 }
 
+.highlight table {
+    width: 100%;
+}
+
 .masthead {
     padding: 3rem 0 7rem;
     position: relative;
