@@ -1,10 +1,10 @@
 <div class="card mb-4 shadow-lg rounded">
 
-    <div class="card-body article-entry">
+    <% if(item.thumbnail) { %>
+    <img class="card-img-top" src="<%- item.thumbnail %>" alt="<%- item.title %>">
+    <% } %>
 
-        <% if(item.thumbnail) { %>
-        <img class="card-img-top" src="<%- item.thumbnail %>" alt="<%- item.title %>">
-        <% } %>
+    <div class="card-body article-entry">
 
         <!-- Title -->
         <h3 class="card-title">
@@ -34,21 +34,25 @@
         <div class="mt-5">
             <h2>Love the post? Share it!</h2>
             <p>
-                Lots of time and effort go into creating all these blogs, resources and demos, I'd love if you'd spare a moment to share this one!
+                Lots of time and effort go into creating all these blogs, resources and demos, I'd love if you'd spare a
+                moment to share this one!
             </p>
 
             <div class="mt-2 d-flex">
-                <a class="btn social-link social-twitter mr-3" href="https://twitter.com/intent/tweet?url=<%- item.permalink %>" target="_blank">
+                <a class="btn social-link social-twitter mr-3"
+                    href="https://twitter.com/intent/tweet?url=<%- item.permalink %>" target="_blank">
                     <i class="fab fa-twitter mr-1"></i>
                     Twitter
                 </a>
 
-                <a class="btn social-link social-facebook mr-3" href="https://www.facebook.com/sharer.php?u=<%- item.permalink %>" target="_blank">
+                <a class="btn social-link social-facebook mr-3"
+                    href="https://www.facebook.com/sharer.php?u=<%- item.permalink %>" target="_blank">
                     <i class="fab fa-facebook mr-1"></i>
                     Facebook
                 </a>
 
-                <a class="btn social-link social-linkedin mr-3" href="https://www.linkedin.com/shareArticle?mini=true&url=<%- item.permalink %>" target="_blank">
+                <a class="btn social-link social-linkedin mr-3"
+                    href="https://www.linkedin.com/shareArticle?mini=true&url=<%- item.permalink %>" target="_blank">
                     <i class="fab fa-linkedin-in mr-1"></i>
                     LinkedIn
                 </a>
