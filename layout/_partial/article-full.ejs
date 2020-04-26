@@ -7,14 +7,14 @@
         <% } %>
 
         <!-- Title -->
-        <h2 class="card-title">
+        <h3 class="card-title">
             <a href="<%- config.root %><%- item.path %>">
                 <%- item.title || item.link%>
             </a>
-        </h2>
+        </h3>
 
         <!-- Date and Author -->
-        <h6 class="card-title">
+        <h6 class="card-title mb-4">
             <%= item.date.format(config.date_format) %>
             <% if(item.author) { %>
             by <%- item.author %>
@@ -22,7 +22,7 @@
         </h6>
 
         <!-- Content -->
-        <%- item.content %>
+        <%- item.more || item.content %>
 
         <div class="cs-content-tags">
             <%- list_tags(item.tags, {
