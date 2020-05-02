@@ -4,6 +4,10 @@ body {
     font-family: nunito, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol, noto color emoji;
 }
 
+.highlight {
+    overflow: scroll;
+}
+
 .highlight table {
     width: 100%;
 }
@@ -127,6 +131,7 @@ body {
 .cs-about-avatar img {
     border: 4px solid #fff;
     border-radius: 50%;
+    max-height: 150px;
     max-width: 150px;
     z-index: 1;
 }
